@@ -1,0 +1,26 @@
+﻿<Window x:Class="MathGame.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathGame"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="288" Width="492.5" Closing="OpenMain">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/mlpfim-everfree-forest.jpg"/>
+        </Grid.Background>
+        <Label x:Name="LblNum1" Content="00" HorizontalAlignment="Left" Margin="65,60,0,0" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="-0.704,-0.345" Foreground="#FFFDFDFD"/>
+        <Label x:Name="LblNum2" Content="00" HorizontalAlignment="Left" Margin="158,60,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFFBF9F9"/>
+        <Label x:Name="LblSymbol" Content="@" HorizontalAlignment="Left" Margin="114,60,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F7F7"/>
+        <Label Content="=" HorizontalAlignment="Left" Margin="207,60,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8"/>
+        <TextBox x:Name="AnswerBox" HorizontalAlignment="Left" Height="55" Margin="276,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" FontSize="36" MaxLength="3" TextChanged="TestInput" Foreground="White" Background="{x:Null}"/>
+        <Button Content="OK!" HorizontalAlignment="Left" Margin="357,218,0,0" VerticalAlignment="Top" Width="75" Click="CheckAnswer" IsDefault="True" Opacity="0.75"/>
+        <Label x:Name="LblScore" Content="0" HorizontalAlignment="Left" Margin="144,190,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White"/>
+        <Label Content="Score:" HorizontalAlignment="Left" Margin="38,190,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFFBF8F8"/>
+        <Label x:Name="QuestionNumLbl" Content="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White"/>
+        <Label x:Name="ErrorLbl" Content="Please Enter Only Numbers. " HorizontalAlignment="Left" Margin="193,134,0,0" VerticalAlignment="Top" Foreground="#FFE00404" FontSize="20" Visibility="Hidden"/>
+        <Label x:Name="TimerLbl" Content="Timer:0" HorizontalAlignment="Left" Margin="357,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" Width="117"/>
+
+    </Grid>
+</Window>
